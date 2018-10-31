@@ -29,3 +29,24 @@ def find_credentials(cls, Network):
         for saved_credentials in cls.Accounts:
             if saved_credentials.platform == Network:
                 return saved_credentials
+
+@classmethod
+def credential_exist(cls,network):
+        '''
+        Method that checks if a credential exists from the contact list.
+        Args:
+            network: platform to search if it exists
+        Returns :
+            Boolean: True or false depending if the contact exists
+        '''
+        for cred in cls.Accounts:
+            if cred.platform == network:
+                    return True
+        return False
+
+@classmethod
+def display_credentials(cls):
+        '''
+        method that returns the credential list
+        '''
+        return cls.Accounts
