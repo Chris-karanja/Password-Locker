@@ -1,7 +1,5 @@
 class User:
-    """
-    Class Generates new instances of Users
-    """
+    """Class Generates new instances of Users"""
 
     Users = [] #list of users
     username = ''
@@ -12,7 +10,5 @@ class User:
         self.email = email
         self.password = password
     def add_user(self):
-         """
-        save_contact method saves contact objects into contact_list
-        """
+         """save_contact method saves contact objects into contact_list"""
          User.Users.append(self)
