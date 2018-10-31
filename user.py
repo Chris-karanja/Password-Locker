@@ -1,3 +1,5 @@
+from credentials import Credentials
+
 class User:
     """Class Generates new instances of Users"""
 
@@ -5,12 +7,13 @@ class User:
     username = ''
     email = ''
     password = ''
-    Accounts = []
+
 
     def __init__(self, username, email, password):
         self.username = username
         self.email = email
         self.password = password
+        
     def add_user(self):
          """save_contact method saves contact objects into contact_list"""
          User.Users.append(self)
