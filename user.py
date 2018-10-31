@@ -5,6 +5,8 @@ class User:
     username = ''
     email = ''
     password = ''
+    Accounts = []
+
     def __init__(self, username, email, password):
         self.username = username
         self.email = email
@@ -14,7 +16,7 @@ class User:
          User.Users.append(self)
 
     @classmethod
-    def find_user(cls, persona, secret):
+    def find_user(cls,persona,secret):
         '''
         Method that takes in a persona and returns a user that matches that persona.
          Args:
