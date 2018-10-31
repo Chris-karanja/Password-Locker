@@ -13,7 +13,7 @@ class TestProgram(unittest.TestCase):
         Runs before each test case
         """
         self.new_user = User(
-         "YoungWeshy",  "andyweru@gmail.com", "password123")
+         "Weshlysnipes",  "chriswainaina@gmail.com", "password123")
 
     def tearDown(self):
         """
@@ -25,8 +25,8 @@ class TestProgram(unittest.TestCase):
         """
         Test whether object is initialized properly
         """
-        self.assertEqual(self.new_user.username, "YoungWeshy")
-        self.assertEqual(self.new_user.email, "andyweru@gmail.com")
+        self.assertEqual(self.new_user.username, "Weshlysnipes")
+        self.assertEqual(self.new_user.email, "chriswainaina@gmail.com")
         self.assertEqual(self.new_user.password, "password123")
 if __name__ == '__main__':
     unittest.main()
