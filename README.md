@@ -17,7 +17,7 @@ Chris Wainaina Karanja
 ## Project setup instructions
 ##### To see the code written use the following commands:
 
-- `git clone 
+- `git clone https://github.com/Chris-karanja/Password-Locker.git
 - `cd passwordlocker_ip`
 - `atom .`
 - `code .` (if using visual studio code is your preffered text editor)
