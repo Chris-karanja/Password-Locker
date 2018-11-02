@@ -42,79 +42,83 @@ def user_exist():
 
 def credential_exist():
     ''' Function that returns true or false if credential exists '''
-return Credential.credential_exist(network)
+    return Credential.credential_exist(network)
 
 def main():
+        print("Hello Welcome to your contact list. What is your name?")
+        user_name = input()
+
+        print(f"Hello {user_name}. what would you like to do?")
+        print('\n')
+
      while True:
                     print("Use these commands : cu - create a new user, du - display users, ac - add credentials, dc - display credentials, ex -exit the password locker ")
 
 
                     command = input().lower()
 
-if command == 'cu':
+#if command == 'cu':
 
-                print("New User")
-                print("-"*10)
+            print("New User")
+            print("-"*10)
 
-                print ("Username")
-                username = input()
+            print ("Username")
+            username = input()
 
-                print("Email")
-                email = input()
+            print("Email")
+            email = input()
 
-                print("Password")
-                password = input()
+            print("Password")
+            password = input()
 
-                save_User(create_user(username, email, password)) # create and save new contact.
-                print ('\n')
+            save_User(create_user(username, email, password)) # create and save new contact.
+            print ('\n')
 
-                print(f"New Contact {username} {email} created")
+            print(f"New Contact {username} {email} created")
 
-                print ('\n')
+            print ('\n')
 
-                    elif command == 'dc':
+elif command == 'dc':
+    if display_credentials():
 
-                    if display_credentials():
+        print("Here is a list of all your credentials")
+        print('\n')
 
-                            print("Here is a list of all your credentials")
-                            print('\n')
+for credential in credential.display_credentials():
 
-                    for credential in credential.display_credentials():
+    print(f"{credential.platform}")
+    print('\n')
 
-                            print(f"{credential.platform}")
-                            print('\n')
+else:
 
-                    else:
+    print('\n')
+    print("You dont seem to have any credentials saved yet")
+    print('\n')
 
-                            print('\n')
-                            print("You dont seem to have any credentials saved yet")
-                            print('\n')
+#elif command == "du":
 
-                    elif command == "du":
+   # display_users()
 
-                        display_users()
+#elif command == 'ac':
 
-                    elif command == 'ac':
+    platform = input()
+    print("platform username: ")
 
-                            print ("platform: ")
-                            platform = input()
-                             print("platform username: ")
+    platform_username = input()
+    print("Password: ")
+    platform_password = input()
 
-                            platform_username = input()
-                             print("Password: ")
-                            platform_password = input()
+    save_Credential(create_credential(platform, platform_username, platform_password)) # create and save new contact.
+    print ('\n')
+    print(f"New Account {platform} for {platform_username} created")
+    print ('\n')
 
-                             save_Credential(create_credential(platform, platform_username, platform_password)) # create and save new contact.
-                            print ('\n')
-                            print(f"New Account {platform} for {platform_username} created")
-                            print ('\n')
+#elif command == "ex":
 
-                     elif command == "ex":
-
-                            print("Bye .......")
-                            break
-                            
-                    else:
-                            print("INVALID COMMAND! .. Try again")
- if __name__ == '__main__':
-     main()
+    print("Bye .......")
+#break
+    
+#else:
+    print("INVALID COMMAND! .. Try again")
+if __name__ == '__main__':
+    main()
